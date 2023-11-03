@@ -21,21 +21,21 @@ body {
 }
 
 #form {
-	font-size: large;
 	font-weight: 700;
 	display: block;
 	text-align: center;
 }
 
-#form p {
+#form h1 {
 	margin: 10px 0;
+	font-size: 1.5rem;
 }
 
 #inputText {
 	padding: 10px;
 	border: 1px solid #ccc;
 	border-radius: 10px;
-	font-size: 16px;
+	font-size: 1rem;
 	width: 80%;
 	margin: 10px 0;
 	height: 50px;
@@ -53,7 +53,7 @@ body {
 	padding: 10px 20px;
 	border: none;
 	border-radius: 5px;
-	font-size: 16px;
+	font-size: 1rem;
 	cursor: pointer;
 	margin: 10px 0;
 	width: 50%;
@@ -89,12 +89,12 @@ body {
 }
 
 .animate-out {
-    animation: scaleOut 0.8s ease-in-out;
-  }
+	animation: scaleOut 0.8s ease-in-out;
+}
 
-  .animate-in {
-    animation: scaleIn 0.8s ease-in-out;
-  }
+.animate-in {
+	animation: scaleIn 0.8s ease-in-out;
+}
 
 @keyframes shake {
 	0%,
@@ -123,21 +123,54 @@ body {
 	}
 }
 
-
 @keyframes scaleIn {
-    0% {
-      transform: scale(0);
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes scaleOut {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(0);
+	}
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 55%;
     }
-    100% {
-      transform: scale(1);
+    #qrImgBox {
+        width: 100%;
     }
-  }
-  
-  @keyframes scaleOut {
-    0% {
-      transform: scale(1);
+    #generateBtn {
+        width: 90%;
+        font-size: 0.8rem; 
     }
-    100% {
-      transform: scale(0);
+    #inputText {
+        width: 100%;
+        font-size: 0.8rem; 
     }
-  }
+	#form h1 {
+		font-size: 1.2rem;
+	}
+}
+
+
+@media screen and (max-width: 500px) {
+	.container {
+        width: 70%;
+    }
+    #generateBtn {
+        width: 100%;
+        font-size: 0.8rem; 
+    }
+	#form h1 {
+		font-size: 1.0rem;
+	}
+}
